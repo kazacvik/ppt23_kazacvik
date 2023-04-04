@@ -11,7 +11,9 @@ env: #proměnné, které můžeme používat dále pomocí env.PUBLISH_DIR
   
   
 jobs:
-  deploy-to-github-pages:
+  deploy-to-github-pages: 
+    permissions: 
+      contents: write #
     runs-on: ubuntu-latest # use ubuntu-latest image to run steps on
     steps:
     # uses GitHub's checkout action to checkout code form the master branch
